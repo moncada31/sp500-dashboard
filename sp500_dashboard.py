@@ -798,7 +798,7 @@ df_display = df_filtrado[columnas_mostrar].copy()
 
 styled = (
     df_display.style
-    .applymap(colorear_valoracion, subset=["Valoración"])
+    .map(colorear_valoracion, subset=["Valoración"])
     # Usamos apply(axis=1) para que cada fila use su propio PER Ref. Sector
     .apply(colorear_per_fila, axis=1)
     .format({
